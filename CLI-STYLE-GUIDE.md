@@ -28,26 +28,26 @@ Consistency is important to help our end users build a mental model of how Panth
 Avoid technical jargon and always assume our end users may have questions. This doesn't mean answering all of those questions in the CLI, but it does mean explaining things in a simple way and when complexity inevitably rises, directing our users to documentation that will help them.
 
 ### 3. Be Proactive
-Being proactive means anticipating user needs and guiding them through a process. This most often takes the form of solution-oriented warning/error messages. Put yourself in the user's shoes and consider what questions you would have every time we are showing feedback or status to them. 
+Being proactive means anticipating user needs and guiding them through a process. This most often takes the form of solution-oriented warning/error messages. Put yourself in the user's shoes and consider what questions you would have every time we are showing feedback or status to them.
 
 ### 4. Be Informative (to people and machines)
-We seek a balance between providing enough relevant information to help our users develop a solid mental model of how Pantheon works without forcing them to read too much text. In addition, it is important we consider not only the end user of the CLI but how users interact with the information we provide them outside of the command line. 
+We seek a balance between providing enough relevant information to help our users develop a solid mental model of how Pantheon works without forcing them to read too much text. In addition, it is important we consider not only the end user of the CLI but how users interact with the information we provide them outside of the command line.
 
 ## User Input & Actions
 
 ### **Subcommands**
-A subcommand is an action that can be taken on a single object (i.e. import, export, delete, etc.). 
+A subcommand is an action that can be taken on a single object (i.e. import, export, delete, etc.).
 
 #### **Formatting and Grammar **
 *   Commands should follow a noun-verb dialogue. This takes the form of `object action` in most cases.
 *   Separate the object and action with a space.
 *   If there is no easy way to avoid multiple words within an object or action, use a dash to separate the words (i.e. word1-word2).
 *   Use commonly understood words (import, export, list, delete, add, etc.).
-*   Be consistent with what words are already being used in other subcommands. 
+*   Be consistent with what words are already being used in other subcommands.
 
-**Examples:** 
+**Examples:**
 
-`pantheon blocks import` 
+`pantheon blocks import`
 
 `pantheon public-key export`
 
@@ -58,7 +58,7 @@ Although noun-verb formatting seems backwards from a speaking perspective (i.e. 
 
 Using required options instead of arguments helps users have a clear understanding of the impact of an action. Inputs are most often verbs (from, to, etc.). Other options avoid the use of verbs to help make this distinction.
 
-**Example:** `pantheon blocks import --from=<FILE>` 
+**Example:** `pantheon blocks import --from=<FILE>`
 
 Requiring the `--from` option makes it clear where you are importing from. In the case of a single parameter (as shown in the example above) we should also accept this as an argument (`pantheon blocks import <FILE>`). Although we accept this formatting, it is not encouraged and should be excluded from our documentation.
 
@@ -85,7 +85,7 @@ Always take security into consideration when deciding the default value of a fla
 
 ### **Options**
 
-Options are used for settings, like specifying a configuration file or to provide input to a subcommand. 
+Options are used for settings, like specifying a configuration file or to provide input to a subcommand.
 
 **Formatting and Grammar**
 
@@ -96,14 +96,14 @@ Options are used for settings, like specifying a configuration file or to provid
 **Example: **`--option-file=<VALUE>`
 
 
-## Adding New Inputs 
+## Adding New Inputs
 
 
 ### General Naming Guidelines
 
 Words matter. Most users will not be interacting with Pantheon on a regular basis so we should name things for ease of understanding.
 
-* Don't use abbreviations unless they are widely understood. Optimize for understanding, not number of characters. 
+* Don't use abbreviations unless they are widely understood. Optimize for understanding, not number of characters.
 
 * Consider existing word choices in other Ethereum clients and follow their lead if it makes sense.
 
@@ -111,7 +111,7 @@ Words matter. Most users will not be interacting with Pantheon on a regular basi
 
 * Consider what "group" a new addition will fit in when displayed on the `--help` screen. Follow the patterns that are already being used to keep things consistent.
 
->  **Note:** Grouping of options on the `--help` screen does not currently exist. 
+>  **Note:** Grouping of options on the `--help` screen does not currently exist.
 
 
 ### Developer vs. End User
@@ -119,23 +119,23 @@ Words matter. Most users will not be interacting with Pantheon on a regular basi
 In general, creating hidden functionality is not ideal. However, if a new subcommand, flag or option has been created specifically for development purposes and has minimal use for end users, begin the name with  `--X` to indicate it's temporary and should not be documented.
 
 
-### Consider Dependent Settings 
+### Consider Dependent Settings
 
 No command, flag or option exists in a vacuum. The user is trying to accomplish a task and we should keep their entire workflow in mind as new things are added. Things to consider are:
 
-*   What other options or flags may be impacted. Can they be combined to avoid extra work for the user and keep our documentation simple? 
+*   What other options or flags may be impacted. Can they be combined to avoid extra work for the user and keep our documentation simple?
 *   What error, success or warning messages need to be added to ensure the user has a clear understanding of what happened and what their next steps may be?
 
 ## Responding to User Input
 
-> **Note:** The patterns and functionality in this section are not currently implemented. 
+> **Note:** The patterns and functionality in this section are not currently implemented.
 
-Feedback to the user should always be clear, concise and avoid technical jargon. We use color and clear labels to help imply meaning. Color should only be used during TTY sessions and can be turned off with the `--color-enabled=false` flag. 
+Feedback to the user should always be clear, concise and avoid technical jargon. We use color and clear labels to help imply meaning. Color should only be used during TTY sessions and can be turned off with the `--color-enabled=false` flag.
 
 
 ### Input Warnings
 
-Warnings should be used when an option has been successfully set but there may be other factors the user should take into consideration. 
+Warnings should be used when an option has been successfully set but there may be other factors the user should take into consideration.
 
 ![Input Warning](docs/images/Warning.png)
 
@@ -145,7 +145,7 @@ Warnings should be used when an option has been successfully set but there may b
 *   **Warning Message: **Bright - Yellow - ANSI 33
 *   **Additional Message (Optional): **No formatting
 
-There should be a clear line break before and after a warning to call attention to it. A second line containing more details or a potential solution is recommended but optional. 
+There should be a clear line break before and after a warning to call attention to it. A second line containing more details or a potential solution is recommended but optional.
 
 
 ### Input Errors
@@ -161,27 +161,27 @@ When a value cannot be applied, show a clear error message and provide context o
 *   **"Solution:" Label (Optional): **Bold
 *   **Solution Message (Optional): **No formatting
 
-There should be a clear line break before and after an error to help call attention to it. A second line containing a potential solution to fix the error is recommended but optional. 
+There should be a clear line break before and after an error to help call attention to it. A second line containing a potential solution to fix the error is recommended but optional.
 
-If the error is caused by an unknown option, the following formatting should be followed: 
+If the error is caused by an unknown option, the following formatting should be followed:
 
 ![Input Unknown Error](docs/images/ErrorUnknown.png)
 
 ## Logging in the CLI
 
-> **Note:** The patterns and functionality in this section are not currently implemented. 
+> **Note:** The patterns and functionality in this section are not currently implemented.
 
-Displaying process should be a balance between human readability and ease of interpretation by machines. We remain as consistent as possible between the information shown in the CLI and what will be included in logs. Having said that, we use color and progress indicators to help users easily scan and interpret the information we are showing them while a TTY session is active. This formatting is optional and can be turned off by the user if desired. 
+Displaying process should be a balance between human readability and ease of interpretation by machines. We remain as consistent as possible between the information shown in the CLI and what will be included in logs. Having said that, we use color and progress indicators to help users easily scan and interpret the information we are showing them while a TTY session is active. This formatting is optional and can be turned off by the user if desired.
 
 
 ### Spacing, Alignment & Visual Formatting
 
-Consistency in spacing is important for machines to easily interpret logs. Consistency in alignment and visual formatting is important for humans to easily scan and find relevant information. 
+Consistency in spacing is important for machines to easily interpret logs. Consistency in alignment and visual formatting is important for humans to easily scan and find relevant information.
 
 
 #### General Format:
 
-`<timestamp> | <log level> | <thread> | <class> | <message>` 
+`<timestamp> | <log level> | <thread> | <class> | <message>`
 
 
 #### Color & Text Formatting:
@@ -206,7 +206,7 @@ Color and formatting is used to help users to easily scan and find relevant info
 #### Spacing & Alignment:
 
 *   Each piece of information is separated by a vertical bar.
-*   We keep consistent visual spacing between the log level and the thread/classes (7 spaces) so messages that relate to the same thread and class are visually grouped. 
+*   We keep consistent visual spacing between the log level and the thread/classes (7 spaces) so messages that relate to the same thread and class are visually grouped.
     *   **INFO** is followed by 3 spaces
     *   **ERROR** is followed by 2 spaces
     *   **WARNING** is followed by a single space
@@ -227,7 +227,7 @@ An "error" should be shown if a process cannot be completed. Errors should be ou
 
 ### Warning
 
-A "warning" is shown when a process has been completed but it did not go as expected. Warnings should be output with "stderr". Warnings should include a clear reason why the warning has occured. 
+A "warning" is shown when a process has been completed but it did not go as expected. Warnings should be output with "stderr". Warnings should include a clear reason why the warning has occured.
 
 ![Log Warning](docs/images/LogWarning.png)
 
@@ -239,8 +239,8 @@ A "failure" should be shown if a process cannot be completed. Details about the 
 
 ## Indicating Progress
 
->  **Note:** The patterns and functionality in this section are not currently implemented. 
+>  **Note:** The patterns and functionality in this section are not currently implemented.
 
 We should always indicate that progress is being made so the user knows a process has not stalled. Progress indicators should only be included for TTY sessions (not in output) and can be turned off with the `--progress-enabled=false` flag. The progress indicator should appear on a new line below the last line of information. Once the process is complete, the progress indicator will move down to the next empty line. A progress indicator is not needed if a process takes less than a second.
 
-![Log Warning](docs/images/spinner.gif)
+![Log Warning](docs/images/Spinner.gif)
