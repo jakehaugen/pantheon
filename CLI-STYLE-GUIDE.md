@@ -6,7 +6,7 @@ This document establishes guidelines to help the Pantheon command-line interface
 
 > **Note:** Although not every pattern shown in this style guide is currently followed in Pantheon, it is our intention to revise and build new functionality with these guidelines in mind.
 
-**The primary audience for this document is: **
+**The primary audience for this document is:**
 
 *   Members of the Pantheon team
 *   Developers contributing pull requests
@@ -38,7 +38,7 @@ We seek a balance between providing enough relevant information to help our user
 ### **Subcommands**
 A subcommand is an action that can be taken on a single object (i.e. import, export, delete, etc.).
 
-#### **Formatting and Grammar **
+#### **Formatting and Grammar**
 *   Commands should follow a noun-verb dialogue. This takes the form of `object action` in most cases.
 *   Separate the object and action with a space.
 *   If there is no easy way to avoid multiple words within an object or action, use a dash to separate the words (i.e. word1-word2).
@@ -66,13 +66,13 @@ Requiring the `--from` option makes it clear where you are importing from. In th
 
 Flags are boolean and turn on or off some behavior.
 
-**Formatting and Grammar **
+**Formatting and Grammar**
 
 *   Each flag should end with "enabled" regardless of the initial state to keep things consistent.
 *   Each state should be supported in the CLI regardless of the default value in order to override a flag set in the config file.
 *   Do not combine words, instead use a dash to separate them (i.e. `--word1-word2-enabled`).  
 
-**Examples: **
+**Examples:**
 
 If “foo” is disabled by default, `--foo-enabled` or `--foo-enabled=true` would turn it on.
 
@@ -83,7 +83,7 @@ If “foo” is enabled by default, `--foo-enabled=false` would turn it off.
 Always take security into consideration when deciding the default value of a flag. If a flag will be enabled for the majority of use cases and there are no security concerns, it should be enabled by default. Otherwise, it should be disabled.
 
 
-### **Options**
+### Options
 
 Options are used for settings, like specifying a configuration file or to provide input to a subcommand.
 
@@ -93,7 +93,7 @@ Options are used for settings, like specifying a configuration file or to provid
 *   Avoid using verbs in option names unless they specify an input for a subcommand.
 *   Specify what the expected value is at the end of the option (i.e. `--config-file` vs. `--config)`.
 
-**Example: **`--option-file=<VALUE>`
+**Example:**`--option-file=<VALUE>`
 
 
 ## Adding New Inputs
@@ -141,9 +141,9 @@ Warnings should be used when an option has been successfully set but there may b
 
 **Color/text formatting:**
 
-*   **"WARNING" Label: **Bold, Bright - Yellow - ANSI 33
-*   **Warning Message: **Bright - Yellow - ANSI 33
-*   **Additional Message (Optional): **No formatting
+*   **"WARNING" Label:** Bold, Bright - Yellow - ANSI 33
+*   **Warning Message:** Bright - Yellow - ANSI 33
+*   **Additional Message (Optional):** No formatting
 
 There should be a clear line break before and after a warning to call attention to it. A second line containing more details or a potential solution is recommended but optional.
 
@@ -156,10 +156,10 @@ When a value cannot be applied, show a clear error message and provide context o
 
 **Color/text formatting:**
 
-*   **"ERROR" Label: **Bold, Red - ANSI 31
-*   **Error Message: **Red - ANSI 31
-*   **"Solution:" Label (Optional): **Bold
-*   **Solution Message (Optional): **No formatting
+*   **"ERROR" Label:** Bold, Red - ANSI 31
+*   **Error Message:** Red - ANSI 31
+*   **"Solution:" Label (Optional):** Bold
+*   **Solution Message (Optional):** No formatting
 
 There should be a clear line break before and after an error to help call attention to it. A second line containing a potential solution to fix the error is recommended but optional.
 
@@ -186,18 +186,18 @@ Consistency in spacing is important for machines to easily interpret logs. Consi
 
 #### Color & Text Formatting:
 
-*   **Timestamp: **Dimmed
-*   **Log Level - INFO: **Cyan - ANSI 96
-*   **Log Level - ERROR: **Bold, Red - ANSI 31
-*   **Log Level - WARNING: **Bold, Bright - Yellow - ANSI 33
-*   **Info Message: **No formatting
+*   **Timestamp:** Dimmed
+*   **Log Level - INFO:** Cyan - ANSI 96
+*   **Log Level - ERROR:** Bold, Red - ANSI 31
+*   **Log Level - WARNING:** Bold, Bright - Yellow - ANSI 33
+*   **Info Message:** No formatting
 *   **Highlighted Information:** Green - ANSI 32
-*   **Error Message: **Bold, Red - ANSI 31
-*   **Warning Message: **Bold, Bright - Yellow - ANSI 33
-*   **Failure Message: **Bold, Red - ANSI 31
+*   **Error Message:** Bold, Red - ANSI 31
+*   **Warning Message:** Bold, Bright - Yellow - ANSI 33
+*   **Failure Message:** Bold, Red - ANSI 31
 *   **Failure Reasons:** Dimmed
-*   **Thread: **Cyan - ANSI 36
-*   **Class: **Cyan - ANSI 36
+*   **Thread:** Cyan - ANSI 36
+*   **Class:** Cyan - ANSI 36
 *   **Vertical Bar Separator:** Dimmed
 
 Color and formatting is used to help users to easily scan and find relevant information. Cyan is our default color making it easy for users to ignore. This makes red and yellow stand out. Green is used selectively to help call attention to specific information or values in messages.
