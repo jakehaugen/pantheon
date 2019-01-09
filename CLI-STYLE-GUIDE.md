@@ -17,7 +17,7 @@ The Pantheon CLI should create a consistent and easy to understand experience fo
 
 ## General Guidelines
 
-There are four guiding principles for the Pantheon CLI to help us create a good developer experience for both new and expert users: **_(1) be consistent, (2) keep it simple, (3) be proactive and (4) be informative (to people and machines)._**
+There are four guiding principles for the Pantheon CLI to help us create a good developer experience for both new and expert users: **_(1) be consistent, (2) keep it simple, (3) be proactive, and (4) be informative (to people and machines)._**
 
 This section outlines what each of these principles mean and the following sections explain how these principles should be applied in specific scenarios.     
 
@@ -31,7 +31,7 @@ Avoid technical jargon and always assume our end users may have questions. This 
 Being proactive means anticipating user needs and guiding them through a process. This most often takes the form of solution-oriented warning/error messages. Put yourself in the user's shoes and consider what questions you would have every time we are showing feedback or status to them.
 
 ### 4. Be Informative (to people and machines)
-We seek a balance between providing enough relevant information to help our users develop a solid mental model of how Pantheon works without forcing them to read too much text. In addition, it is important we consider not only the end user of the CLI but to be consistent in formatting so information is easily interpreted by machines.
+We seek a balance between providing enough relevant information to help our users develop a solid mental model of how Pantheon works without forcing them to read too much text. In addition, it is important we consider not only the end user of the CLI but to be consistent with formatting and feedback so information is easily interpreted by machines.
 
 ## User Input & Actions
 
