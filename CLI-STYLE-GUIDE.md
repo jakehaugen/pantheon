@@ -2,7 +2,7 @@
 
 ## Purpose of this Document
 
-This document establishes guidelines to help the Pantheon command-line interface (CLI) remain usable, modular and extensible as it grows over time. This is a living document and should evolve to better suit end users and those who contribute to Pantheon.
+This document contains guidelines to help the Pantheon command-line interface (CLI) remain usable, modular, and extensible as it grows over time. This is a living document and should evolve to better suit end users and those who contribute to Pantheon.
 
 > **Note:** Although not every pattern shown in this style guide is currently followed in Pantheon, it is our intention to revise and build new functionality with these guidelines in mind.
 
@@ -22,7 +22,7 @@ There are four guiding principles for the Pantheon CLI to help us create a good 
 This section outlines what each of these principles mean and the following sections explain how these principles should be applied in specific scenarios.     
 
 ### 1. Be Consistent
-Consistency is important to help our end users build a mental model of how Pantheon works. By being consistent with our word choices, visual formatting and style of communication it helps users know what to expect as they interact with Pantheon.  
+Consistency is important to help our end users build a mental model of how Pantheon works. By being consistent with our word choices, visual formatting, and style of communication it helps users know what to expect as they interact with Pantheon.  
 
 ### 2. Keep it Simple
 Avoid technical jargon and always assume our end users may have questions. This doesn't mean answering all of those questions in the CLI, but it does mean explaining things in a simple way and when complexity inevitably rises, directing our users to documentation that will help them.
@@ -31,7 +31,7 @@ Avoid technical jargon and always assume our end users may have questions. This 
 Being proactive means anticipating user needs and guiding them through a process. This most often takes the form of solution-oriented warning/error messages. Put yourself in the user's shoes and consider what questions you would have every time we are showing feedback or status to them.
 
 ### 4. Be Informative (to people and machines)
-We seek a balance between providing enough relevant information to help our users develop a solid mental model of how Pantheon works without forcing them to read too much text. In addition, it is important we consider not only the end user of the CLI but how users interact with the information we provide them outside of the command line.
+We seek a balance between providing enough relevant information to help our users develop a solid mental model of how Pantheon works without forcing them to read too much text. In addition, it is important we consider not only the end user of the CLI but to be consistent in formatting so information is easily interpreted by machines.
 
 ## User Input & Actions
 
@@ -69,7 +69,7 @@ Flags are boolean and turn on or off some behavior.
 **Formatting and Grammar**
 
 *   Each flag should end with "enabled" regardless of the initial state to keep things consistent.
-*   Each state should be supported in the CLI regardless of the default value in order to override a flag set in the config file.
+*   Each state should be supported in the CLI regardless of the default value in order to override a flag set in the configuration file.
 *   Do not combine words, instead use a dash to separate them (i.e. `--word1-word2-enabled`).  
 
 **Examples:**
