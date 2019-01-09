@@ -1,8 +1,8 @@
-# Pantheon CLI Style Guide
+# Pantheon Command Line Interface (CLI) Style Guide
 
 ## Purpose of this Document
 
-This document contains guidelines to help the Pantheon command-line interface (CLI) remain usable, modular, and extensible as it grows over time. This is a living document and should evolve to better suit end users and those who contribute to Pantheon.
+This document contains guidelines to help the Pantheon command line interface (CLI) remain usable, modular, and extensible as it grows over time. This is a living document and should evolve to better suit end users and those who contribute to Pantheon.
 
 > **Note:** Although not every pattern shown in this style guide is currently followed in Pantheon, it is our intention to revise and build new functionality with these guidelines in mind.
 
@@ -210,7 +210,7 @@ Color and formatting is used to help users to easily scan and find relevant info
     *   **INFO** is followed by 3 spaces
     *   **ERROR** is followed by 2 spaces
     *   **WARNING** is followed by a single space
-*   Spacing and alignment is the same in the command-line and logs to ensure users have a consistent experience.
+*   Spacing and alignment is the same in the command line and logs to ensure users have a consistent experience.
 
 
 ### Information
