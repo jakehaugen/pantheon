@@ -174,7 +174,7 @@ If the error is caused by an unknown option, the following formatting should be 
 Displaying process should be a balance between human readability and ease of interpretation by machines. We remain as consistent as possible between the information shown in the CLI and what will be included in logs. Having said that, we use color and progress indicators to help users easily scan and interpret the information we are showing them while a TTY session is active. This formatting is optional and can be turned off by the user if desired.
 
 
-### Spacing, Alignment & Visual Formatting
+### Spacing, Alignment, & Visual Formatting
 
 Consistency in spacing is important for machines to easily interpret logs. Consistency in alignment and visual formatting is important for humans to easily scan and find relevant information.
 
